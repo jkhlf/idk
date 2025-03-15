@@ -1,7 +1,7 @@
 'use server';
 
 import { z } from 'zod';
-import { createSession, verifyPassword } from '../lib/auth';
+import { createSession, verifyPassword, createUser, deleteSession } from '../lib/auth';
 import { redirect } from 'next/navigation'
 
 
@@ -9,7 +9,7 @@ export type SignInData = z.infer<typeof SignInDataSchema>
 export type SignUpData = z.infer<typeof SignUpDataSchema>
 
 
-export type ActionReponse = {
+export type ActionResponse = {
     sucess: boolean
     message: string
     errors?: Record<string, string>
