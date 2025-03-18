@@ -12,7 +12,7 @@ import { mockDelay } from '@/lib/utils'
 import { redirect } from 'next/navigation'
 
 // Define Zod schema for signin validation
-const SignInSchema = z.object({
+export const SignInSchema = z.object({
   email: z.string().min(1, 'Email is required').email('Invalid email format'),
   password: z.string().min(1, 'Password is required'),
 })

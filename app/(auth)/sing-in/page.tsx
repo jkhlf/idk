@@ -2,14 +2,14 @@
 
 import { useActionState } from 'react'
 import { useRouter } from 'next/navigation'
-import Button from '@/app/components/ui/Button'
+import { Button } from '@/app/components/ui/button'
 import {
   Form,
   FormGroup,
   FormLabel,
   FormInput,
   FormError,
-} from '@/app/components/ui/Form'
+} from '@/app/components/ui/form'
 import Link from 'next/link'
 import toast from 'react-hot-toast'
 import { signIn, ActionResponse } from '@/app/actions/auth'
@@ -105,7 +105,7 @@ export default function SignInPage() {
             </FormGroup>
 
             <div>
-              <Button type="submit" className="w-full" isLoading={isPending}>
+              <Button type="submit" className="w-full">
                 Sign in
               </Button>
             </div>
